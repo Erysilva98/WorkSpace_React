@@ -2,7 +2,9 @@
 
 ### Registro de Aulas
 
-- 01/03 Criando componente React
+- 01/03 
+    Criando componente React
+    this.props e seu uso em componentes
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
