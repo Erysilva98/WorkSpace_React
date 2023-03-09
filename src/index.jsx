@@ -22,4 +22,11 @@ class Pagina01 extends React.Component{
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<Timer/>);
+root.render(
+
+    <div>
+        <Timer start={0} ms={1000}></Timer>
+        <Timer start={0} ms={500}></Timer>
+    </div>
+
+);
