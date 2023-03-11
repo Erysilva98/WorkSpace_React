@@ -1,32 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Timer from './components/Exemplo1'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import routes from './routes';
+import './index.css';
 
-class HelloWord extends React.Component {
-    render()
-    {
-        return <h1>Olá {this.props.nome}</h1>
-    }
-}
+const router = createBrowserRouter(routes);
 
-class Pagina01 extends React.Component{
-    render(){
-        return (
-            <>
-                <HelloWord nome={this.props.nome[0]}></HelloWord>
-                <HelloWord nome={this.props.nome[1]}> </HelloWord>
-            </>
-        );
-    }
-}
+const root = ReactDOM.createRoot(document.getElementById('root'));
 
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-
-    <div>
-        <Timer start={0} ms={1000}></Timer>
-        <Timer start={0} ms={500}></Timer>
-    </div>
-
+  <React.StrictMode>
+    <RouterProvider router={router} />
+  </React.StrictMode>,
 );
