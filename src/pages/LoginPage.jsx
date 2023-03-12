@@ -1,13 +1,14 @@
 import React from "react";
 import logo from "../img/logo.png";
+import "./css/loginPage.css"
 
 function Login()
 {
     return (
-        <>
-            <header>
+        <div className="container">
+            <header className="header" >
                 <img src={logo} alt="Logo da Moura"/>
-                <span>Descrição</span>
+                <span>Entre com sua conta</span>
             </header>
 
             <form>
@@ -37,7 +38,7 @@ function Login()
                     <button>Entrar</button>
                 </div>
             </form>
-        </>
+        </div>
     );
 }
 
