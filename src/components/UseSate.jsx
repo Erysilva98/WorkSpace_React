@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Exemplo2()
+function UseState()
 {
     const [count, setCount] = useState(0);
 
@@ -16,4 +16,4 @@ function Exemplo2()
     );
 }
 
-export default Exemplo2;
+export default UseState;
