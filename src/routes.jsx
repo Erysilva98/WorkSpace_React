@@ -1,10 +1,10 @@
 import React from 'react';
-import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
+import Menu from './components/menu';
 
 const routes = [
-  { path: '/', element: <LoginPage />},
-  { path: '/HomePage', element: <HomePage />},
+  { path: '/', element: <Menu />},
+  { path: '/Login', element: <LoginPage/>},
 ];
 
 

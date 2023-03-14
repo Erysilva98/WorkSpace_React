@@ -1,12 +1,12 @@
 import React from "react";
-// import Timer from "../components/Exemplo1"
+import Menu from "../components/menu";
 
 function HomePage()
 {
     return (
-        <>
-            <h1>Home Page</h1>
-        </>
+        <div className="bg-gray-400">
+            <Menu/>
+        </div>
     )
 }
 
