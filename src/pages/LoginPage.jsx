@@ -1,43 +1,52 @@
 import React from "react";
 import logo from "../img/logo.png";
-import "./css/loginPage.css"
 
 function Login()
 {
     return (
-        <div className="container">
-            <header className="header" >
+        <div className="h-screen w-screen flex flex-col justify-center items-center ">
+           
+            <header className="flex flex-col items-center">
+
                 <img src={logo} alt="Logo da Moura"/>
-                <span>Entre com sua conta</span>
+
+                <span className="text-5xl font-semibold">Entre com sua conta</span>
+
             </header>
 
-            <form>
-                <div>
-                    <label htmlFor="email">E-mail: </label>
-                    <input 
-                        type="text"
-                        name="email"
-                        id="email"
-                        placeholder=" emailPessoal@gmail.com "
-                    />
-                </div>
+            <form className="w-1/2">
 
-                <div>
-                    <label htmlFor="password">Senha: </label>
+                <label>
+                    <input
+                            className="w-full h-7" 
+
+                            type="text"
+                            name="email"
+                            id="email"
+                            placeholder=" E-mail "
+                        />
+                </label>
+                    
+                <label>
                     <input 
+                        className="w-full h-7" 
+
                         type="password"
                         name="password"
                         id="password"
-                        placeholder=" *********** "
+                        placeholder=" Senha "
                     />
-                </div>
-
-                <a href="/">Esqueceu sua Senha ? </a>
-
-                <div>
-                    <button>Entrar</button>
-                </div>
+                </label>
             </form>
+            <a href="/" className="w-1/3 flex flex-row-reverse text-blue-900 font-semibold ">Esqueceu sua Senha ? </a>
+            
+            <div className="w-1/2">
+                <button
+                    className="bg-blue-800 w-full h-7 my-6 rounded-full"
+                >
+                    Entrar
+                </button>
+            </div>     
         </div>
     );
 }

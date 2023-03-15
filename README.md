@@ -20,6 +20,10 @@ Acesse a Pasta do Projeto
 
 A Aplicaçõa será aberta neste endereço IP\
 [http://localhost:3000](http://localhost:3000) 
+
+### Refêrencia
+
+    https://tailwindcss.com/docs/installation
 ## Desenvolvedor
 
 - Erimilson Silva
