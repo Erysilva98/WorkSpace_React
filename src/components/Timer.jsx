@@ -4,15 +4,16 @@ class Timer extends React.Component {
     constructor(props)
     {
         super(props);
-        const {start} = this.props;
         this.state = {
-            seconds: start,
+            seconds: 0,
         };
     }
 
     contar()
     {
-        this.setState( (state) => ({ seconds: state.seconds + 1}) );
+        this.setState( 
+            (state) => ({ seconds: state.seconds + 1}) 
+        );
     }
 
     startStop()
@@ -30,29 +31,37 @@ class Timer extends React.Component {
 
     zero()
     {
-        this.setState( state => ({
+        this.setState( () => ({
             seconds: 0,
         }));
     }
 
+    visor(){
+        const { seconds } = this.state;
+        return `${seconds}`;
+    }
+
     render () {
         return (
-            <>
-                <div className="bg-black border-black w-48 md:w-96 h-16 m-4 rounded-xl flex flex-col justify-center items-center">
-                    <h1 className="text-5xl text-white cronometro">
-                        {this.state.seconds}
-                    </h1>
+            <div>
+                <div className=" bg-gray-400 rounded-b-2xl border-4 border-preto w-80 p-4 gap-4 flex flex-col m-4">
+                    <div className='bg-preto border-black rounded-xl flex felx-col justify-center items-center'>
+                        <h1 className="text-5xl text-white cronometro">
+                            {this.visor()}
+                        </h1>
+                    </div>                    
                 </div>
-                <div className="flex flex-row justify-center w-48 md:2-96 m4">
-                    <button onClick={ () => this.startStop() } className="bg-azulEscuro text-white m-4 px-4 scroll-py-24 w-36">
-                        Iniciar/Parar
-                    </button>
-                    <button onClick={() => this.zero()} className="bg-red-500 text-white m-4 px-4 scroll-py-24 w-36">
-                        Zerar
-                    </button>
+                <div className="flex flex-row justify-arroubd">
+                    <div className="flex flex-col justify-center items-center">
+                        <p className='font-bold text-sm'>Start/Stop</p>
+                        <input type="button" value="" onClick={ () => this.startStop() } className="bg-azulEscuro houver:bg-azulEscuro/80 w-10 h-10 rounded-full cursor-pointer"/>
+                    </div>
+                    <div className='flex flex-col justify-center items-center'>
+                        <p className="font-bold text-sm">Reset</p>
+                        <input type="button" value="" onClick={() => this.zero()} className="bg-red-800 hover:bg-red-800/80 w-10 h-10 rounded-full cursor-pointer" />
+                    </div>
                 </div>
-                
-            </>
+            </div>
             
         );
     }

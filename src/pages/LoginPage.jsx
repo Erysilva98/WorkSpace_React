@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../img/logo.png";
 
 function Login()
 {
+    const [email, setEmail] = useState(null);
+    const [senha, setSenha] = useState(null);
+
     return (
         <div className="h-screen w-screen flex flex-col justify-center items-center ">
            
@@ -24,6 +27,8 @@ function Login()
                             name="email"
                             id="email"
                             placeholder=" E-mail "
+                            value={email.email}
+                            onChange={e => {setEmail(e.target.value)}}
                         />
                 </label>
                     
@@ -35,6 +40,8 @@ function Login()
                         name="password"
                         id="password"
                         placeholder=" Senha "
+                        value={senha.senha}
+                        onChange={e => {setSenha(e.target.value)}}
                     />
                 </label>
             </form>

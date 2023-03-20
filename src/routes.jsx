@@ -10,8 +10,7 @@ const routes = [
   { path: '/login', element: <LoginPage/>},
   { path: '/timer', element: <Timer/>},
   { path: '/contador', element: <UseState/>},
-  { path: '/contador', element: <UseEffect/>} 
-
+  { path: '/contador', element: <UseEffect/>}
 ];
 
 
