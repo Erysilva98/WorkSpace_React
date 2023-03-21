@@ -1,13 +1,11 @@
 import React from "react";
-import Menu from "../components/menu";
+import Menu from "../components/menu"
 
-function HomePage()
+export default function Home()
 {
     return (
-        <div className="bg-gray-400">
+        <div>
             <Menu/>
         </div>
-    )
-}
-
-export default HomePage;
+    );
+} 
