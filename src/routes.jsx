@@ -4,7 +4,7 @@ import LoginPage from './pages/LoginPage';
 
 const routes = [
   { path: '/', element: <Home/>},
-  { path: '/login', element: <LoginPage/>},
+  { path: '/', element: <LoginPage/>},
 ];
 
 

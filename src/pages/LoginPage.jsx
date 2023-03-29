@@ -1,11 +1,11 @@
 import React from "react";
-import Login1 from "../components/login";
+import Login from "../components/login";
 
-export default function Login()
+export default function LoginPage()
 {
     return (
         <div className="mt-2">
-           <Login1/>
+           <Login/>
         </div>
     );
 }
