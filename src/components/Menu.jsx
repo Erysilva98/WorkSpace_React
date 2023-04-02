@@ -31,7 +31,7 @@ export default function Menu()
                         </NavLink>
                     </li>
                     <li className="h-8 leading-8">
-                        <NavLink to="/timer" className="nav-link">
+                        <NavLink to="/" className="nav-link">
                             <span className="flex flex-row gap-2 items-center">
                                 <RxLapTimer />
                                 {' '}
@@ -40,7 +40,7 @@ export default function Menu()
                         </NavLink>
                     </li>
                     <li className="h-8 leading-8">
-                        <NavLink to="/timer" className="nav-link">
+                        <NavLink to="/" className="nav-link">
                             <span className="flex flex-row gap-2 items-center">
                                 <TbNumbers />
                                 {' '}
@@ -49,7 +49,7 @@ export default function Menu()
                         </NavLink>
                     </li>
                     <li className="h-8 leading-8">
-                        <NavLink to="/timer" className="nav-link">
+                        <NavLink to="/form" className="nav-link">
                             <span className="flex flex-row gap-2 items-center">
                                 <TbForms />
                                 {' '}
@@ -58,7 +58,7 @@ export default function Menu()
                         </NavLink>
                     </li>
                     <li className="h-8 leading-8">
-                        <NavLink to="/timer" className="nav-link">
+                        <NavLink to="/" className="nav-link">
                             <span className="flex flex-row gap-2 items-center">
                                 <AiFillGithub />
                                 {' '}
