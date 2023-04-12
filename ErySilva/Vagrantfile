@@ -1,0 +1,28 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+$script = <<-EOF
+sudo apt-get update
+sudo apt-get upgrade -y
+sudo apt-get install -y mc nginx nodejs npm
+git clone https://github.com/Erysilva98/WorkSpace_React.git
+cd WorkSpace_React
+sudo npm install
+sudo npm run build
+sudo cp -r build/. /var/www/html/
+EOF
+
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "ubuntu/jammy64"
+  config.vm.network "private_network", ip: "192.168.56.123"
+  config.vm.network "public_network"
+  
+  config.vm.provision "shell", inline: $script
+  
+  config.vm.provider "virtualbox" do |vb|
+    vb.name = "ErySilva"
+    vb.memory = "1024"
+    vb.cpus = "2"
+  end
+end
