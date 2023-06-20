@@ -4,7 +4,8 @@
 $script = <<-EOF
 sudo apt-get update
 sudo apt-get upgrade -y
-sudo apt-get install -y mc nginx nodejs npm
+sudo apt-get install -y mc nginx 
+sudo apt-get install -y nodejs npm build-essential
 git clone https://github.com/Erysilva98/WorkSpace_React.git
 cd WorkSpace_React
 sudo npm install
